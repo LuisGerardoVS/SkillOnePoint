@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos - SkillOnePoint</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+
+<body>
+    <!-- Background overlay for depth -->
+    <!-- Header / Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="SkillOnePoint Logo" class="navbar-logo">
+                <span class="brand-text">SkillOnePoint</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+                <ul class="navbar-nav align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="membrecias.html">Membresías</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="videotutoriales.html">Videotutoriales</a>
+                    </li>
+                    <!--  <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownRecursos" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Recursos
+                        </a>
+                        <ul class="dropdown-menu shadow-sm" aria-labelledby="navbarDropdownRecursos">
+                            <li><a class="dropdown-item" href="documentos.html">Documentos</a></li>
+                            <li><a class="dropdown-item" href="videotutoriales.html">Video tutoriales</a></li>
+                        </ul>
+                    </li> -->
+                    <!--<li class="nav-item">
+                        <a class="nav-link" href="solicitudes.html">Solicitudes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="equipo.html">Equipo</a>
+                    </li> -->
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <a href="reportar.html" class="btn btn-custom w-100">Reportar Incidencia</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container mt-4 mb-5">
+        <!-- Dashboard Header & Search -->
+        <div class="row mb-5 align-items-center">
+            <div class="col-md-7 mb-3 mb-md-0 pt-3">
+                <h1
+                    style="color: white; text-shadow: 1px 2px 5px rgba(0,0,0,0.3); font-weight: 700; font-size: 2.8rem; margin-bottom: 5px;">
+                    Recursos y Documentos</h1>
+                <p style="color: rgba(255,255,255, 0.9); font-size: 1.15rem; margin-bottom: 0;">Gestiona y explora la
+                    biblioteca digital de SkillOnePoint.</p>
+            </div>
+            <div class="col-md-5 pt-3">
+                <div class="input-group shadow-sm" style="border-radius: 8px; overflow: hidden;">
+                    <span class="input-group-text bg-white border-0 text-muted" id="search-icon"><i
+                            class="fa-solid fa-magnifying-glass"></i></span>
+                    <input type="text" id="searchInput" class="form-control border-0 py-3"
+                        placeholder="Buscar manuales, plantillas..." aria-label="Buscar" aria-describedby="search-icon">
+                    <button class="btn btn-custom px-4" type="button">Buscar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categorías / Folders -->
+        <div id="folders-section">
+            <h4 class="mb-4" style="color: white; font-weight: 600; text-shadow: 1px 1px 3px rgba(0,0,0,0.2);">Carpetas
+                Principales</h4>
+            <div class="row g-4 mb-5">
+                <!-- Folder 1 -->
+                <div class="col-12 col-md-4">
+                    <div class="card custom-card folder-card p-3 d-flex flex-row align-items-center"
+                        data-folder="manuales" data-title="Manuales de Usuario" style="cursor: pointer;">
+                        <div class="folder-icon me-3" style="color: #f6c05a; font-size: 2.5rem;">
+                            <i class="fa-solid fa-folder"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; color: var(--secondary-color);">Manuales de
+                                Usuario</h5>
+                            <p class="text-muted small mb-0">2 archivos</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Folder 2 -->
+                <div class="col-12 col-md-4">
+                    <div class="card custom-card folder-card p-3 d-flex flex-row align-items-center"
+                        data-folder="formatos" data-title="Formatos y Plantillas" style="cursor: pointer;">
+                        <div class="folder-icon me-3" style="color: #63d18e; font-size: 2.5rem;">
+                            <i class="fa-solid fa-folder"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; color: var(--secondary-color);">Formatos y
+                                Plantillas</h5>
+                            <p class="text-muted small mb-0">2 archivos</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Folder 3 -->
+                <div class="col-12 col-md-4">
+                    <div class="card custom-card folder-card p-3 d-flex flex-row align-items-center" data-folder="guias"
+                        data-title="Guías Rápidas" style="cursor: pointer;">
+                        <div class="folder-icon me-3" style="color: #5ab1f6; font-size: 2.5rem;">
+                            <i class="fa-solid fa-folder"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; color: var(--secondary-color);">Guías Rápidas</h5>
+                            <p class="text-muted small mb-0">1 archivo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Documentos Header -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <!-- Título Dinámico -->
+            <div class="d-flex align-items-center">
+                <a href="#" id="back-to-folders"
+                    style="display: none; color: white; text-decoration: none; font-size: 1.2rem; margin-right: 15px; opacity: 0.8; transition: opacity 0.3s;"
+                    onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'"><i
+                        class="fa-solid fa-arrow-left-long"></i></a>
+                <h4 id="files-section-title"
+                    style="color: white; font-weight: 600; text-shadow: 1px 1px 3px rgba(0,0,0,0.2); margin: 0;">
+                    Todos los archivos</h4>
+            </div>
+        </div>
+
+        <!-- MASTER GRID PARA TODOS LOS ARCHIVOS -->
+        <div class="row g-4" id="master-files-grid">
+
+            <!-- ====== RECIENTES ====== -->
+            <!-- File 1 -->
+            <div class="col-12 col-md-6 col-lg-4 file-col default-recent">
+                <div class="card custom-card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div class="file-icon" style="color: #e55353; font-size: 2.2rem;">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+                        <button class="btn btn-sm btn-light rounded-circle shadow-sm"
+                            style="color: var(--secondary-color); width: 32px; height: 32px;"><i
+                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                    <h5 class="mb-2" style="font-weight: 700; color: var(--secondary-color); font-size: 1.15rem;">
+                        Políticas de Desarrollo 2026</h5>
+                    <p class="text-muted small mb-3">Actualizado hace 2 días</p>
+                    <div class="mt-auto d-flex justify-content-between align-items-center pt-3 border-top"
+                        style="border-color: rgba(0,0,0,0.05) !important;">
+                        <span class="badge bg-light text-dark shadow-sm border" style="font-size: 0.75rem;">PDF • 2.4
+                            MB</span>
+                        <a href="#" class="btn btn-sm btn-custom rounded-pill px-3 py-1"><i
+                                class="fa-solid fa-download"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- File 2 -->
+            <div class="col-12 col-md-6 col-lg-4 file-col default-recent">
+                <div class="card custom-card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div class="file-icon" style="color: #2a8a9e; font-size: 2.2rem;">
+                            <i class="fa-solid fa-file-word"></i>
+                        </div>
+                        <button class="btn btn-sm btn-light rounded-circle shadow-sm"
+                            style="color: var(--secondary-color); width: 32px; height: 32px;"><i
+                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                    <h5 class="mb-2" style="font-weight: 700; color: var(--secondary-color); font-size: 1.15rem;">
+                        Plantilla de Reporte Semanal</h5>
+                    <p class="text-muted small mb-3">Actualizado la semana pasada</p>
+                    <div class="mt-auto d-flex justify-content-between align-items-center pt-3 border-top"
+                        style="border-color: rgba(0,0,0,0.05) !important;">
+                        <span class="badge bg-light text-dark shadow-sm border" style="font-size: 0.75rem;">DOCX • 1.1
+                            MB</span>
+                        <a href="#" class="btn btn-sm btn-custom rounded-pill px-3 py-1"><i
+                                class="fa-solid fa-download"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- File 3 -->
+            <div class="col-12 col-md-6 col-lg-4 file-col default-recent">
+                <div class="card custom-card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div class="file-icon" style="color: #33a852; font-size: 2.2rem;">
+                            <i class="fa-solid fa-file-excel"></i>
+                        </div>
+                        <button class="btn btn-sm btn-light rounded-circle shadow-sm"
+                            style="color: var(--secondary-color); width: 32px; height: 32px;"><i
+                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                    <h5 class="mb-2" style="font-weight: 700; color: var(--secondary-color); font-size: 1.15rem;">
+                        Portafolio</h5>
+                    <p class="text-muted small mb-3">Actualizado hace 1 mes</p>
+                    <div class="mt-auto d-flex justify-content-between align-items-center pt-3 border-top"
+                        style="border-color: rgba(0,0,0,0.05) !important;">
+                        <span class="badge bg-light text-dark shadow-sm border" style="font-size: 0.75rem;">XLSX • 3.5
+                            MB</span>
+                        <a href="https://utm-cdn-labcontenidos-htfaarehf2gcfycs.a01.azurefd.net/contenido/SkillOnePoint/recursos/descargables/Portafolio.xlsx"
+                            class="btn btn-sm btn-custom rounded-pill px-3 py-1"><i
+                                class="fa-solid fa-download"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- File 4 -->
+            <div class="col-12 col-md-6 col-lg-4 file-col default-recent">
+                <div class="card custom-card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div class="file-icon" style="color: #845ef7; font-size: 2.2rem;">
+                            <i class="fa-solid fa-link"></i>
+                        </div>
+                        <button class="btn btn-sm btn-light rounded-circle shadow-sm"
+                            style="color: var(--secondary-color); width: 32px; height: 32px;"><i
+                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                    <h5 class="mb-2" style="font-weight: 700; color: var(--secondary-color); font-size: 1.15rem;">Acceso
+                        al Portal CRM</h5>
+                    <p class="text-muted small mb-3">Enlace Directo Externo</p>
+                    <div class="mt-auto d-flex justify-content-between align-items-center pt-3 border-top"
+                        style="border-color: rgba(0,0,0,0.05) !important;">
+                        <span class="badge bg-light text-dark shadow-sm border" style="font-size: 0.75rem;">URL
+                            Externo</span>
+                        <a href="#" class="btn btn-sm btn-custom rounded-pill px-3 py-1"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ====== MANUALES ====== -->
+            <!-- File -->
+            <div class="col-12 col-md-6 col-lg-4 file-col folder-manuales" style="display: none;">
+                <div class="card custom-card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div class="file-icon" style="color: #e55353; font-size: 2.2rem;"><i
+                                class="fa-solid fa-file-pdf"></i></div>
+                        <button class="btn btn-sm btn-light rounded-circle shadow-sm"><i
+                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                    <h5 class="mb-2" style="font-weight: 700; color: var(--secondary-color); font-size: 1.15rem;">Manual
+                        de Inducción Corporativa</h5>
+                    <p class="text-muted small mb-3">Material oficial RH</p>
+                    <div class="mt-auto d-flex justify-content-between align-items-center pt-3 border-top"
+                        style="border-color: rgba(0,0,0,0.05) !important;">
+                        <span class="badge bg-light text-dark shadow-sm border" style="font-size: 0.75rem;">PDF • 5.1
+                            MB</span>
+                        <a href="#" class="btn btn-sm btn-custom rounded-pill px-3 py-1"><i
+                                class="fa-solid fa-download"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- File -->
+            <div class="col-12 col-md-6 col-lg-4 file-col folder-manuales" style="display: none;">
+                <div class="card custom-card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div class="file-icon" style="color: #e55353; font-size: 2.2rem;"><i
+                                class="fa-solid fa-file-pdf"></i></div>
+                        <button class="btn btn-sm btn-light rounded-circle shadow-sm"><i
+                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                    <h5 class="mb-2" style="font-weight: 700; color: var(--secondary-color); font-size: 1.15rem;">Manual
+                        de Uso de Herramientas</h5>
+                    <p class="text-muted small mb-3">Reglas y lineamientos TI</p>
+                    <div class="mt-auto d-flex justify-content-between align-items-center pt-3 border-top"
+                        style="border-color: rgba(0,0,0,0.05) !important;">
+                        <span class="badge bg-light text-dark shadow-sm border" style="font-size: 0.75rem;">PDF • 2.8
+                            MB</span>
+                        <a href="#" class="btn btn-sm btn-custom rounded-pill px-3 py-1"><i
+                                class="fa-solid fa-download"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ====== FORMATOS ====== -->
+            <!-- File -->
+            <div class="col-12 col-md-6 col-lg-4 file-col folder-formatos" style="display: none;">
+                <div class="card custom-card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div class="file-icon" style="color: #2a8a9e; font-size: 2.2rem;"><i
+                                class="fa-solid fa-file-word"></i></div>
+                        <button class="btn btn-sm btn-light rounded-circle shadow-sm"><i
+                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                    <h5 class="mb-2" style="font-weight: 700; color: var(--secondary-color); font-size: 1.15rem;">
+                        Formato de Memoria Técnica</h5>
+                    <p class="text-muted small mb-3">Para entregables de software</p>
+                    <div class="mt-auto d-flex justify-content-between align-items-center pt-3 border-top"
+                        style="border-color: rgba(0,0,0,0.05) !important;">
+                        <span class="badge bg-light text-dark shadow-sm border" style="font-size: 0.75rem;">DOCX • 1.2
+                            MB</span>
+                        <a href="#" class="btn btn-sm btn-custom rounded-pill px-3 py-1"><i
+                                class="fa-solid fa-download"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- File -->
+            <div class="col-12 col-md-6 col-lg-4 file-col folder-formatos" style="display: none;">
+                <div class="card custom-card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div class="file-icon" style="color: #33a852; font-size: 2.2rem;"><i
+                                class="fa-solid fa-file-excel"></i></div>
+                        <button class="btn btn-sm btn-light rounded-circle shadow-sm"><i
+                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                    <h5 class="mb-2" style="font-weight: 700; color: var(--secondary-color); font-size: 1.15rem;">
+                        Presupuesto de Proyecto Base</h5>
+                    <p class="text-muted small mb-3">Gastos y estimaciones</p>
+                    <div class="mt-auto d-flex justify-content-between align-items-center pt-3 border-top"
+                        style="border-color: rgba(0,0,0,0.05) !important;">
+                        <span class="badge bg-light text-dark shadow-sm border" style="font-size: 0.75rem;">XLSX • 4.1
+                            MB</span>
+                        <a href="#" class="btn btn-sm btn-custom rounded-pill px-3 py-1"><i
+                                class="fa-solid fa-download"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ====== GUIAS ====== -->
+            <!-- File -->
+            <div class="col-12 col-md-6 col-lg-4 file-col folder-guias" style="display: none;">
+                <div class="card custom-card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div class="file-icon" style="color: #e55353; font-size: 2.2rem;"><i
+                                class="fa-solid fa-file-pdf"></i></div>
+                        <button class="btn btn-sm btn-light rounded-circle shadow-sm"><i
+                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                    <h5 class="mb-2" style="font-weight: 700; color: var(--secondary-color); font-size: 1.15rem;">Guía
+                        de Sobrevivencia SkillOnePoint</h5>
+                    <p class="text-muted small mb-3">Pasos básicos de inicio</p>
+                    <div class="mt-auto d-flex justify-content-between align-items-center pt-3 border-top"
+                        style="border-color: rgba(0,0,0,0.05) !important;">
+                        <span class="badge bg-light text-dark shadow-sm border" style="font-size: 0.75rem;">PDF • 1.9
+                            MB</span>
+                        <a href="#" class="btn btn-sm btn-custom rounded-pill px-3 py-1"><i
+                                class="fa-solid fa-download"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container pb-3">
+            <span class="d-block d-md-inline mb-2 mb-md-0">Contacto: <a href="mailto:contacto@skillonepoint.com"
+                    class="fw-bold" style="opacity: 1;">contacto@skillonepoint.com</a></span>
+            <span class="footer-divider d-none d-md-inline">|</span>
+            <a href="#">Políticas de Privacidad</a>
+            <span class="footer-divider">|</span>
+            <a href="#">Términos y Condiciones</a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

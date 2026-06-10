@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillOnePoint - Portal de Desarrollo</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+
+<body>
+    <!-- Background overlay for depth -->
+    <div class="bg-overlay"></div>
+
+    <!-- Header / Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="SkillOnePoint Logo" class="navbar-logo">
+                <span class="brand-text">SkillOnePoint</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+                <ul class="navbar-nav align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="membrecias.html">Membresías</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="videotutoriales.html">Videotutoriales</a>
+                    </li>
+                    <!--  <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownRecursos" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Recursos
+                        </a>
+                        <ul class="dropdown-menu shadow-sm" aria-labelledby="navbarDropdownRecursos">
+                            <li><a class="dropdown-item" href="documentos.html">Documentos</a></li>
+                            <li><a class="dropdown-item" href="videotutoriales.html">Video tutoriales</a></li>
+                        </ul>
+                    </li> -->
+                    <!--<li class="nav-item">
+                        <a class="nav-link" href="solicitudes.html">Solicitudes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="equipo.html">Equipo</a>
+                    </li> -->
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <a href="mailto:mejoratucurso@servicios.tecmilenio.mx"" class=" btn btn-custom w-100">Reportar
+                            Incidencia</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section Full Width -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">Bienvenido a SkillOnePoint</h1>
+            <p class="hero-desc">El sitio oficial del área de Migración de Plataformas de Tecmilenio®</p>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <main class="container mb-5 mt-4">
+
+        <!-- Main Features Cards -->
+        <section class="mb-5">
+            <div class="row g-4">
+                <!-- Instancias personalizadas -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card custom-card text-center p-4">
+                        <div class="card-body p-0 d-flex flex-column align-items-center">
+                            <h3 class="card-title-custom">Instancias personalizadas</h3>
+                            <i class="fa-solid fa-server feature-icon mt-2"></i>
+                            <a href="instancias.html" class="btn btn-custom btn-rounded mt-auto w-100">Ver Instancias <i
+                                    class="fa-solid fa-chevron-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Creación de cursos -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card custom-card text-center p-4">
+                        <div class="card-body p-0 d-flex flex-column align-items-center">
+                            <h3 class="card-title-custom">Creación de cursos</h3>
+                            <i class="fa-solid fa-pen-ruler feature-icon mt-2"></i>
+                            <a href="creacioncursos.html" class="btn btn-custom btn-rounded mt-auto w-100">Ver Más <i
+                                    class="fa-solid fa-chevron-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Creación de rutas de formación -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card custom-card text-center p-4">
+                        <div class="card-body p-0 d-flex flex-column align-items-center">
+                            <h3 class="card-title-custom">Creación de rutas de formación</h3>
+                            <i class="fa-solid fa-route feature-icon mt-2"></i>
+                            <a href="creacionrutas.html" class="btn btn-custom btn-rounded mt-auto w-100">Ver Más <i
+                                    class="fa-solid fa-chevron-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portafolio Académico -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card custom-card text-center p-4">
+                        <div class="card-body p-0 d-flex flex-column align-items-center">
+                            <h3 class="card-title-custom">Portafolio Académico</h3>
+                            <i class="fa-solid fa-book-open feature-icon mt-2"></i>
+                            <a target="_blank"
+                                href="https://utmedu.sharepoint.com/:x:/r/sites/Produccion_decontenido/administraci%C3%B3n_portafolio/_layouts/15/Doc.aspx?sourcedoc=%7B16A82CA3-6049-4101-A1A0-2A33D5D9C88D%7D&file=FOR-AP-05_Portafolio%20de%20educaci%C3%B3n%20abierta_P%C3%BAblico.xlsx&action=default&mobileredirect=true&web=1"
+                                class="btn btn-custom btn-rounded mt-auto w-100">Ir a sitio <i
+                                    class="fa-solid fa-chevron-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secondary Information Section -->
+        <section class="mb-5">
+            <div class="row g-4">
+                <!-- Downloads -->
+                <div class="col-12 col-lg-6">
+                    <div class="card custom-card h-100 d-flex flex-column overflow-hidden">
+                        <!-- Header -->
+                        <div class="px-3 py-2 text-center border-bottom"
+                            style="background: rgba(43, 140, 158, 0.05); border-color: rgba(255,255,255,0.08) !important;">
+                            <span class="text-uppercase fw-bold"
+                                style="font-size: 0.65rem; letter-spacing: 1.5px; color: var(--secondary-color);">Recurso
+                                de Registro</span>
+                        </div>
+
+                        <!-- Body -->
+                        <div
+                            class="p-3 d-flex flex-column align-items-center text-center justify-content-center flex-grow-1">
+                            <div class="mb-2 d-flex align-items-center justify-content-center rounded"
+                                style="width: 50px; height: 50px; background: rgba(43, 140, 158, 0.1);">
+                                <i class="fa-solid fa-file-excel"
+                                    style="font-size: 1.8rem; color: var(--primary-color);"></i>
+                            </div>
+                            <h3 class="card-title-custom mb-1" style="font-size: 1.15rem;">Formato Enrolamiento</h3>
+                            <p class="text-muted mb-0" style="font-size: 0.8rem; opacity: 0.8;">Plantilla maestra
+                                (.xlsx)</p>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="p-3 mt-auto" style="background: rgba(0,0,0,0.05);">
+                            <a target="_blank"
+                                href="https://utmedu.sharepoint.com/:x:/r/sites/Guiarapida_MP/_layouts/15/Doc.aspx?sourcedoc=%7BA0F142A5-2239-4B50-90F0-1DE193ED0FDE%7D&file=FOR-MP-01-Solicitud-ABC--Altas--Bajas--Cambios--y-Enrolamientos-en-Lapzo.xlsx&action=default&mobileredirect=true"
+                                class="btn btn-custom btn-rounded w-100 py-2 d-flex align-items-center justify-content-center gap-2 shadow-sm"
+                                style="font-size: 0.9rem; font-weight: 700;">
+                                <i class="fa-solid fa-download" style="font-size: 0.8rem;"></i>
+                                <span>Descargar Formato</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interesting Links -->
+                <div class="col-12 col-lg-6">
+                    <div class="card custom-card p-4 h-100">
+                        <h3 class="card-title-custom mb-3 text-start">Enlaces de Interés</h3>
+                        <ul class="links-list links-2-cols">
+                            <li><a target="_blank" href="https://www.tecmilenio.mx/es"><i
+                                        class="fa-solid fa-circle"></i> Tecmilenio</a></li>
+                            <li><a target="_blank" href="https://cursos.tecmilenio.mx/login/canvas"><i
+                                        class="fa-solid fa-circle"></i> Canvas</a></li>
+                            <li><a target="_blank" href="https://www.skillingcenter.com/"><i
+                                        class="fa-solid fa-circle"></i> Marketplace</a></li>
+                            <li><a target="_blank" href="https://centro-de-ayuda.com/lapzo"><i
+                                        class="fa-solid fa-circle"></i> Centro de ayuda Lapzo</a>
+                            </li>
+                            <li><a target="_blank" href="https://v0-interactive-test-catalog.vercel.app/"><i
+                                        class="fa-solid fa-circle"></i> Portafolio de Diagnósticos</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="mb-2">
+            <h3 class="team-title">Conoce a nuestro equipo SkillOnePoint</h3>
+            <div class="row g-3 justify-content-center">
+                <!-- Member 1 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="team-card team-card-clickable" data-bs-toggle="modal" data-bs-target="#teamModal"
+                        data-name="Sebastián Castillo" data-role="Líder de migración de plataformas"
+                        data-services="<li>Estrategia y migración de contenido a nuevas plataformas LMS</li><li>Asesoría en arquitectura de plataformas</li><li>Resolución de problemas técnicos complejos</li>">
+                        <!-- Using local images for avatars -->
+                        <img src="img/Perfil_Sebas.png" alt="Sebastián Castillo" class="team-avatar">
+                        <div class="team-info">
+                            <h5>Sebastián Castillo</h5>
+                            <p class="role">Líder de migración de plataformas</p>
+                            <p class="help-text">Ver áreas de apoyo <i class="fa-solid fa-arrow-right ms-1"
+                                    style="font-size:0.8em"></i></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="team-card team-card-clickable" data-bs-toggle="modal" data-bs-target="#teamModal"
+                        data-name="Luis Vázquez" data-role="Programador web"
+                        data-services="<li>Desarrollo de nuevas funcionalidades web</li><li>Optimización de código y rendimiento</li><li>Integración de APIs y servicios externos</li>">
+                        <img src="img/Perfil_Luis.png" alt="Luis Vázquez" class="team-avatar">
+                        <div class="team-info">
+                            <h5>Luis Vázquez</h5>
+                            <p class="role">Programador web</p>
+                            <p class="help-text">Ver áreas de apoyo <i class="fa-solid fa-arrow-right ms-1"
+                                    style="font-size:0.8em"></i></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Member 3 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="team-card team-card-clickable" data-bs-toggle="modal" data-bs-target="#teamModal"
+                        data-name="Leslie Estrada" data-role="Programadora web"
+                        data-services="<li>Mantenimiento y actualización de portales HTML/JS</li><li>Maquetación responsiva y diseño UI</li><li>Corrección de bugs en el frontend</li>">
+                        <img src="img/Perfil_Caro.png" alt="Leslie Estrada" class="team-avatar">
+                        <div class="team-info">
+                            <h5>Leslie Estrada</h5>
+                            <p class="role">Programadora web</p>
+                            <p class="help-text">Ver áreas de apoyo <i class="fa-solid fa-arrow-right ms-1"
+                                    style="font-size:0.8em"></i></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Member 4 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="team-card team-card-clickable" data-bs-toggle="modal" data-bs-target="#teamModal"
+                        data-name="Marcela Onofre" data-role="Administradora de plataforma"
+                        data-services="<li>Gestión de accesos y enrolamiento de usuarios</li><li>Configuración de cursos y objetivos de aprendizaje</li><li>Soporte general de la plataforma LMS</li>">
+                        <img src="img/Perfil_Marce.png" alt="Marcela Onofre" class="team-avatar">
+                        <div class="team-info">
+                            <h5>Marcela Onofre</h5>
+                            <p class="role">Administradora de plataforma</p>
+                            <p class="help-text">Ver áreas de apoyo <i class="fa-solid fa-arrow-right ms-1"
+                                    style="font-size:0.8em"></i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Team Modal -->
+    <div class="modal fade" id="teamModal" tabindex="-1" aria-labelledby="teamModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content custom-card team-modal-card" style="border: 1px solid rgba(255, 255, 255, 0.1);">
+                <button type="button" class="custom-modal-close" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="modal-header border-bottom-0 pb-0">
+                    <h5 class="modal-title card-title-custom mb-0" id="teamModalLabel">Perfil del Equipo</h5>
+                </div>
+                <div class="modal-body pt-3 pb-4">
+                    <div class="text-center mb-4">
+                        <h4 id="modalTeamName" class="fw-bold mb-1" style="color: #2c444e;">Nombre</h4>
+                        <p id="modalTeamRole" class="text-muted mb-0">Rol</p>
+                    </div>
+                    <div class="services-container px-2">
+                        <h6 class="fw-bold mb-3 d-flex align-items-center">
+                            <i class="fa-solid fa-hands-helping me-2" style="color: #6edff6;"></i>
+                            ¿En qué te puede ayudar?
+                        </h6>
+                        <ul id="modalTeamServices" class="links-list ps-1 mb-0" style="list-style: none;">
+                            <!-- Services injected via JS -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container pb-3">
+            <span class="d-block d-md-inline mb-2 mb-md-0">Contacto: <a href="mailto:contacto@skillonepoint.com"
+                    class="fw-bold" style="opacity: 1;">contacto@skillonepoint.com</a></span>
+            <span class="footer-divider d-none d-md-inline">|</span>
+            <a href="#">Políticas de Privacidad</a>
+            <span class="footer-divider">|</span>
+            <a href="#">Términos y Condiciones</a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html> <a href="#">Términos y Condiciones</a>
+</div>
+</footer>
+
+<!-- Bootstrap Bundle with Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="js/main.js"></script>
+</body>
+
+</html>

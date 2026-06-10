@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instancias personalizadas</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+
+<body>
+    <!-- Background overlay for depth -->
+    <div class="bg-overlay"></div>
+
+    <!-- Header / Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="SkillOnePoint Logo" class="navbar-logo">
+                <span class="brand-text">SkillOnePoint</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+                <ul class="navbar-nav align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="membrecias.html">Membresías</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="videotutoriales.html">Videotutoriales</a>
+                    </li>
+                    <!--  <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownRecursos" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Recursos
+                        </a>
+                        <ul class="dropdown-menu shadow-sm" aria-labelledby="navbarDropdownRecursos">
+                            <li><a class="dropdown-item" href="documentos.html">Documentos</a></li>
+                            <li><a class="dropdown-item" href="videotutoriales.html">Video tutoriales</a></li>
+                        </ul>
+                    </li> -->
+                    <!--<li class="nav-item">
+                        <a class="nav-link" href="solicitudes.html">Solicitudes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="equipo.html">Equipo</a>
+                    </li> -->
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <a href="reportar.html" class="btn btn-custom w-100">Reportar Incidencia</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="container mt-4 mb-5">
+
+        <!-- Dashboard Header & Search -->
+        <div class="row mb-5 align-items-center">
+            <div class="col-md-7 mb-3 mb-md-0 pt-3">
+                <h1
+                    style="color: white; text-shadow: 1px 2px 5px rgba(0,0,0,0.3); font-weight: 700; font-size: 2.8rem; margin-bottom: 5px;">
+                    Instancias de Lapzo</h1>
+                <p style="color: rgba(255,255,255, 0.9); font-size: 1.15rem; margin-bottom: 0;">Explora y accede a las
+                    diferentes instancias de la plataforma Lapzo en convenio con Tecmilenio.</p>
+            </div>
+            <div class="col-md-5 pt-3">
+                <div class="input-group shadow-sm" style="border-radius: 8px; overflow: hidden;">
+                    <span class="input-group-text bg-white border-0 text-muted" id="instancia-search-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                    <input type="text" id="instanciaSearchInput" class="form-control border-0 py-3"
+                        placeholder="Buscar instancia..." aria-label="Buscar instancia"
+                        aria-describedby="instancia-search-icon">
+                    <button class="btn btn-custom px-4" type="button"
+                        onclick="document.getElementById('instanciaSearchInput').dispatchEvent(new Event('input'))">Buscar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sin resultados -->
+        <div id="instancias-no-results" style="display: none;" class="text-center py-5">
+            <i class="fa-solid fa-circle-xmark mb-3" style="font-size: 3rem; color: rgba(255,255,255,0.4);"></i>
+            <p style="color: rgba(255,255,255,0.7); font-size: 1.1rem;">No se encontraron instancias con ese nombre.</p>
+        </div>
+
+        <div class="row g-4" id="instancias-grid">
+            <!-- Instancia 1 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 instancia-col" data-name="Skilling Center">
+                <div class="card custom-card text-center p-4 h-100">
+                    <div class="mb-3 d-flex align-items-center justify-content-center"
+                        style="height: 100px; background: #2c444e; border-radius: 10px; padding: 10px;">
+                        <img src="img/Instancias/Logo_SkillingCenter.png" alt="Skilling Center"
+                            style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                    </div>
+                    <div class="card-body p-0 d-flex flex-column align-items-center h-100">
+                        <h4 class="card-title-custom mb-3">Skilling Center</h4>
+                        <a href="https://courses.skillingcenter.com/signin" target="_blank"
+                            class="btn btn-custom btn-rounded mt-auto w-100">
+                            Ir a sitio <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Instancia 2 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 instancia-col" data-name="Grupo Velas">
+                <div class="card custom-card text-center p-4 h-100">
+                    <div class="mb-3 d-flex align-items-center justify-content-center"
+                        style="height: 100px; background: #3E2B2F; border-radius: 10px; padding: 10px;">
+                        <img src="img/Instancias/Logo_GrupoVelas.png" alt="Grupo Velas"
+                            style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                    </div>
+                    <div class="card-body p-0 d-flex flex-column align-items-center h-100">
+                        <h4 class="card-title-custom mb-3">Grupo Velas</h4>
+                        <a href="https://grupovelas.lapzo.app/signin" target="_blank"
+                            class="btn btn-custom btn-rounded mt-auto w-100">
+                            Ir a sitio <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Instancia 3 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 instancia-col" data-name="Universidad Zapata">
+                <div class="card custom-card text-center p-4 h-100">
+                    <div class="mb-3 d-flex align-items-center justify-content-center"
+                        style="height: 80px; background: #d4d9dc; border-radius: 10px; padding: 10px;">
+                        <img src="img/Instancias/Logo_UniversidadZapata.png" alt="Universidad Zapata"
+                            style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                    </div>
+                    <div class="card-body p-0 d-flex flex-column align-items-center h-100">
+                        <h4 class="card-title-custom mb-3">Universidad Zapata</h4>
+                        <a href="https://universidadzapata.lapzo.app/signin" target="_blank"
+                            class="btn btn-custom btn-rounded mt-auto w-100">
+                            Ir a sitio <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Instancia 4 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 instancia-col" data-name="Gran Bodega">
+                <div class="card custom-card text-center p-4 h-100">
+                    <div class="mb-3 d-flex align-items-center justify-content-center"
+                        style="height: 100px; background: #FF5100; border-radius: 10px; padding: 10px;">
+                        <img src="img/Instancias/Logo_GranBodega.png" alt="Gran Bodega"
+                            style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                    </div>
+                    <div class="card-body p-0 d-flex flex-column align-items-center h-100">
+                        <h4 class="card-title-custom mb-3">Gran Bodega</h4>
+                        <a href="https://capacitacioncontinuagb.lapzo.app/signin" target="_blank"
+                            class="btn btn-custom btn-rounded mt-auto w-100">
+                            Ir a sitio <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Instancia 5 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 instancia-col" data-name="Prepa Go Walmart">
+                <div class="card custom-card text-center p-4 h-100">
+                    <div class="mb-3 d-flex align-items-center justify-content-center"
+                        style="height: 100px; background: #0071CE; border-radius: 10px; padding: 10px;">
+                        <img src="img/Instancias/Logo_SkillingCenter.png" alt="Skilling Center"
+                            style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                    </div>
+                    <div class="card-body p-0 d-flex flex-column align-items-center h-100">
+                        <h4 class="card-title-custom mb-3">Prepa Go - Walmart</h4>
+                        <a href="https://prepago.tecmilenio.mx/signin" target="_blank"
+                            class="btn btn-custom btn-rounded mt-auto w-100">
+                            Ir a sitio <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Instancia 6 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 instancia-col" data-name="SEP">
+                <div class="card custom-card text-center p-4 h-100">
+                    <div class="mb-3 d-flex align-items-center justify-content-center"
+                        style="height: 100px; background: #01544d; border-radius: 10px; padding: 10px;">
+                        <img src="img/Instancias/Logo_SEP.png" alt="SEP"
+                            style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                    </div>
+                    <div class="card-body p-0 d-flex flex-column align-items-center h-100">
+                        <h4 class="card-title-custom mb-3">SEP</h4>
+                        <a href="https://educacionenlinea.lapzo.app/signin" target="_blank"
+                            class="btn btn-custom btn-rounded mt-auto w-100">
+                            Ir a sitio <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Instancia 7 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 instancia-col" data-name="IECA">
+                <div class="card custom-card text-center p-4 h-100">
+                    <div class="mb-3 d-flex align-items-center justify-content-center"
+                        style="height: 80px; background: #0066FF; border-radius: 10px; padding: 10px;">
+                        <img src="img/Instancias/Logo_IECA.png" alt="IECA"
+                            style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                    </div>
+                    <div class="card-body p-0 d-flex flex-column align-items-center h-100">
+                        <h4 class="card-title-custom mb-3">IECA</h4>
+                        <a href="https://iecagto.lapzo.app/signin" target="_blank"
+                            class="btn btn-custom btn-rounded mt-auto w-100">
+                            Ir a sitio <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Instancia 8 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 instancia-col" data-name="EX-Walmart Educación">
+                <div class="card custom-card text-center p-4 h-100">
+                    <div class="mb-3 d-flex align-items-center justify-content-center"
+                        style="height: 100px; background: #2c444e; border-radius: 10px; padding: 10px;">
+                        <img src="img/Instancias/Logo_SkillingCenter.png" alt="Skilling Center"
+                            style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                    </div>
+                    <div class="card-body p-0 d-flex flex-column align-items-center h-100">
+                        <h4 class="card-title-custom mb-3">EX-Walmart Educación</h4>
+                        <a href="https://educaciontecmilenio.mx/signin" target="_blank"
+                            class="btn btn-custom btn-rounded mt-auto w-100">
+                            Ir a sitio <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Instancia 9 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 instancia-col" data-name="ESI School of Management Guatemala">
+                <div class="card custom-card text-center p-4 h-100">
+                    <div class="mb-3 d-flex align-items-center justify-content-center"
+                        style="height: 80px; background: #1F2E50; border-radius: 10px; padding: 10px;">
+                        <img src="img/Instancias/Logo_ESI.png" alt="ESI"
+                            style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                    </div>
+                    <div class="card-body p-0 d-flex flex-column align-items-center h-100">
+                        <h4 class="card-title-custom mb-3">ESI School of Management (Guatemala)</h4>
+                        <a href="https://cdcesi.lapzo.app/signin" target="_blank"
+                            class="btn btn-custom btn-rounded mt-auto w-100">
+                            Ir a sitio <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Instancia 10 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 instancia-col" data-name="CESDE">
+                <div class="card custom-card text-center p-4 h-100">
+                    <div class="mb-3 d-flex align-items-center justify-content-center"
+                        style="height: 80px; background: #EE2B7B; border-radius: 10px; padding: 10px;">
+                        <img src="img/Instancias/Logo_CESDE.png" alt="CESDE"
+                            style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                    </div>
+                    <div class="card-body p-0 d-flex flex-column align-items-center h-100">
+                        <h4 class="card-title-custom mb-3">CESDE - Centro de Estudios Especializados</h4>
+                        <a href="https://liderazgopositivocesde.lapzo.app/signin" target="_blank"
+                            class="btn btn-custom btn-rounded mt-auto w-100">
+                            Ir a sitio <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Instancia 11 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 instancia-col" data-name="Skilling Center Tecmilenio Pruebas">
+                <div class="card custom-card text-center p-4 h-100">
+                    <div class="mb-3 d-flex align-items-center justify-content-center"
+                        style="height: 100px; background: #2c444e; border-radius: 10px; padding: 10px;">
+                        <img src="img/Instancias/Logo_SkillingCenter.png" alt="Skilling Center"
+                            style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                    </div>
+                    <div class="card-body p-0 d-flex flex-column align-items-center h-100">
+                        <h4 class="card-title-custom mb-3">Skilling Center Tecmilenio - Pruebas</h4>
+                        <a href="https://competencias-tm.lapzo.app/signin" target="_blank"
+                            class="btn btn-custom btn-rounded mt-auto w-100">
+                            Ir a sitio <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Instancia 12 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 instancia-col" data-name="Demo Lapzo">
+                <div class="card custom-card text-center p-4 h-100">
+                    <div class="mb-3 d-flex align-items-center justify-content-center"
+                        style="height: 100px; background: #2c444e; border-radius: 10px; padding: 10px;">
+                        <img src="img/Instancias/Logo_SkillingCenter.png" alt="Skilling Center"
+                            style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                    </div>
+                    <div class="card-body p-0 d-flex flex-column align-items-center h-100">
+                        <h4 class="card-title-custom mb-3">Demo Lapzo</h4>
+                        <a href="https://democdc.lapzo.app/signin" target="_blank"
+                            class="btn btn-custom btn-rounded mt-auto w-100">
+                            Ir a sitio <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Sección de Recursos de Soporte -->
+    <section class="container mb-5">
+        <div class="card custom-card p-4 p-md-5">
+            <div class="row align-items-center gy-4">
+                <div class="col-lg-5 text-center text-lg-start">
+                    <h3 class="card-title-custom mb-1">¿Necesitas ayuda con tu instancia?</h3>
+                    <p class="text-muted small mb-0">Consulta el manual de uso o solicita soporte a través del
+                        formulario oficial.</p>
+                </div>
+                <div
+                    class="col-lg-7 d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-end">
+                    <!-- Botón Manual -->
+                    <a href="https://utmedu.sharepoint.com/sites/Guiarapida_MP/SiteAssets/Forms/AllItems.aspx?id=%2Fsites%2FGuiarapida%5FMP%2FSiteAssets%2FSitePages%2FSolicitud%2Dde%2Dinstancias%2Dpersonalizadas%2FMANUAL%2D1%2EPDF&parent=%2Fsites%2FGuiarapida%5FMP%2FSiteAssets%2FSitePages%2FSolicitud%2Dde%2Dinstancias%2Dpersonalizadas"
+                        target="_blank" class="btn btn-custom btn-rounded d-flex align-items-center gap-3"
+                        style="padding: 14px 24px; font-size: 0.95rem; font-weight: 600; min-width: 220px; text-align: left;">
+                        <i class="fa-solid fa-book-open fa-xl" style="flex-shrink: 0;"></i>
+                        <span>Manual detallado<br><small
+                                style="font-weight: 400; opacity: 0.85; font-size: 0.78rem;">Guía completa de
+                                usuario</small></span>
+                    </a>
+                    <!-- Botón Formulario -->
+                    <a href="https://forms.office.com/pages/responsepage.aspx?id=HZUOA_1u9UKEJ7q2Ms-AEBWqksZ6kVhJmD-YF-bd9H1UM084WjAxV0QyMzc4OTREU1RLODE5MDhHVi4u&origin=lprLink&route=shorturl"
+                        target="_blank" class="btn btn-custom btn-rounded d-flex align-items-center gap-3"
+                        style="padding: 14px 24px; font-size: 0.95rem; font-weight: 600; min-width: 220px; text-align: left;">
+                        <i class="fa-solid fa-file-pen fa-xl" style="flex-shrink: 0;"></i>
+                        <span>Solicitar instancia<br><small
+                                style="font-weight: 400; opacity: 0.85; font-size: 0.78rem;">Formulario
+                                oficial</small></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container pb-3">
+            <span class="d-block d-md-inline mb-2 mb-md-0">Contacto: <a href="mailto:contacto@skillonepoint.com"
+                    class="fw-bold" style="opacity: 1;">contacto@skillonepoint.com</a></span>
+            <span class="footer-divider d-none d-md-inline">|</span>
+            <a href="#">Políticas de Privacidad</a>
+            <span class="footer-divider">|</span>
+            <a href="#">Términos y Condiciones</a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
