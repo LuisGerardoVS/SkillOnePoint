@@ -1,0 +1,25 @@
+name: Actualizar Datos desde SharePoint
+
+on:
+  schedule:
+    - cron: '0 * * * *' # El robot revisará tu SharePoint automáticamente cada hora
+  workflow_dispatch: # Te da un botón para activarlo manualmente cuando quieras
+
+jobs:
+  download-json:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Clonar repositorio
+      uses: actions/checkout@v4
+
+    - name: Descargar JSON desde SharePoint
+      run: |
+        # Reemplaza la URL de abajo por el enlace de tu archivo de SharePoint entre comillas
+        curl -L -o datos.json "PEGA_AQUÍ_EL_ENLACE_DE_TU_SHAREPOINT"
+
+    - name: Subir cambios al repositorio
+      run: |
+        git config --global user.name "GitHub Action Bot"
+        git config --global user.email "actions@github.com"
+        git add datos.json
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Actualización automática de cursos desde SharePoint" && git push)
