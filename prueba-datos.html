@@ -5,65 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prueba de Conexión - Tablero</title>
     <style>
-        /* Estilos rápidos para que no se vea feo */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f3f2f1;
-            padding: 30px;
-            color: #323130;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
+        /* 1. Modificamos el contenedor principal de tu página (o el body) 
+   para asegurarnos de que el fondo y la página se estiren junto con la tabla */
+        body, .contenedor-principal {
+            width: min-content;      /* Fuerza a la página a expandirse al ancho real del contenido */
+            min-width: 100%;         /* Asegura que nunca sea más pequeña que la pantalla inicial */
+            margin: 0 auto;          /* Centra todo el bloque perfectamente */
             padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* 2. El contenedor de la tabla se acoplará al tamaño exacto de lo que mida la tabla */
+        .contenedor-tabla {
+            display: inline-block;   /* Se comporta como bloque pero respeta el tamaño interno */
+            width: 100%;
+            margin: 20px auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
-        h1 {
-            color: #0078d4; /* Azul Microsoft */
-            margin-top: 0;
-        }
-        #loading {
-            padding: 20px;
-            background-color: #fff2cc;
-            border-left: 5px solid #ffbf00;
-            margin-bottom: 15px;
-            font-weight: bold;
-        }
-        /* 1. Este contenedor evita que la tabla empuje el diseño a la derecha */
-            .contenedor-tabla {
-                width: 100%;
-                max-width: 1200px;       /* El ancho máximo que quieras para tu tabla */
-                margin: 20px auto;       /* El "auto" centra el contenedor perfectamente en la pantalla */
-                overflow-x: auto;        /* Si los datos se pasan, crea una barra de desplazamiento horizontal */
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opcional: una sombra sutil para que se vea pro */
-                border-radius: 8px;
-            }
 
-            /* 2. Ajustes para la tabla interna */
-            table {
-                width: 100%;
-                border-collapse: collapse;
-                min-width: 600px;        /* Evita que las columnas se aplasten demasiado */
-                background-color: #ffffff;
-            }
+        /* 3. La tabla se expande libremente sin restricciones de pantalla */
+        table {
+            width: max-content;      /* ¡La clave! La tabla medirá exactamente la suma de lo que midan sus títulos */
+            min-width: 100%;
+            border-collapse: collapse;
+            table-layout: auto;      /* El navegador calcula las columnas basándose en el texto más largo */
+        }
 
-            /* 3. Evita que los textos largos hagan filas gigantescas */
-            th, td {
-                padding: 12px 15px;
-                text-align: left;
-                white-space: nowrap;     /* Evita que los textos salten de línea bruscamente */
-                max-width: 300px;        /* Límite para columnas con mucho texto */
-                overflow: hidden;
-                text-overflow: ellipsis; /* Si el texto es ultra largo, le pone "..." al final */
-            }
+        /* 4. Obligamos a que cada celda abarque el ancho completo de su título */
+        th, td {
+            padding: 14px 20px;      /* Espaciado cómodo para que respiren los datos */
+            text-align: left;
+            white-space: nowrap;     /* ¡Crucial! Prohíbe los saltos de línea. La celda medirá lo que mida el título */
+        }
+
+        /* Estilos visuales de los encabezados */
         th {
-            background-color: #f3f2f1;
-            font-weight: 600;
+            background-color: #003366; 
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border-bottom: 3px solid #002244;
         }
-        tr:hover {
-            background-color: #f7f9fa;
+
+        /* Estilos de las celdas de datos */
+        td {
+            font-size: 15px;
+            color: #333333;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        /* Opcional: Un efecto cebra para leer mejor las filas largas */
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
         }
     </style>
 </head>
