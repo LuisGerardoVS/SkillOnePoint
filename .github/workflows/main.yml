@@ -15,7 +15,7 @@ jobs:
     - name: Descargar JSON desde SharePoint
       run: |
         # Reemplaza la URL de abajo por el enlace de tu archivo de SharePoint entre comillas
-        curl -L -o datos.json "https://utmedu.sharepoint.com/:u:/s/ProduccindeContenidos/IQCUduqXvYbZQ5sJ-NhY7nueAUmYkBOtzP_eXfZIZTZLt5M?e=qlkK7h"
+        curl -L -o datos.json "https://utmedu.sharepoint.com/sites/Produccion_decontenido/Migracion-plataformas/_layouts/15/download.aspx?UniqueId=60331d191a514e5f84c40959d32417ba&e=6VtbVa"
 
     - name: Subir cambios al repositorio
       run: |
