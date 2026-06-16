@@ -31,16 +31,33 @@
             margin-bottom: 15px;
             font-weight: bold;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #edebe9;
-        }
+        /* 1. Este contenedor evita que la tabla empuje el diseño a la derecha */
+            .contenedor-tabla {
+                width: 100%;
+                max-width: 1200px;       /* El ancho máximo que quieras para tu tabla */
+                margin: 20px auto;       /* El "auto" centra el contenedor perfectamente en la pantalla */
+                overflow-x: auto;        /* Si los datos se pasan, crea una barra de desplazamiento horizontal */
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opcional: una sombra sutil para que se vea pro */
+                border-radius: 8px;
+            }
+
+            /* 2. Ajustes para la tabla interna */
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                min-width: 600px;        /* Evita que las columnas se aplasten demasiado */
+                background-color: #ffffff;
+            }
+
+            /* 3. Evita que los textos largos hagan filas gigantescas */
+            th, td {
+                padding: 12px 15px;
+                text-align: left;
+                white-space: nowrap;     /* Evita que los textos salten de línea bruscamente */
+                max-width: 300px;        /* Límite para columnas con mucho texto */
+                overflow: hidden;
+                text-overflow: ellipsis; /* Si el texto es ultra largo, le pone "..." al final */
+            }
         th {
             background-color: #f3f2f1;
             font-weight: 600;
@@ -58,6 +75,8 @@
         
         <div id="loading">Intentando leer el archivo JSON...</div>
 
+        <div class="contenedor-tabla">
+        
         <table id="tabla-datos" style="display: none;">
             <thead>
                 <tr>
@@ -76,6 +95,7 @@
             <tbody id="contenedor-filas">
                 </tbody>
         </table>
+        </div>
     </div>
 
     <script src="script.js"></script>
