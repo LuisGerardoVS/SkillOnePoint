@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de Conexión - Tablero</title>
+    <style>
+        /* Estilos rápidos para que no se vea feo */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f3f2f1;
+            padding: 30px;
+            color: #323130;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        h1 {
+            color: #0078d4; /* Azul Microsoft */
+            margin-top: 0;
+        }
+        #loading {
+            padding: 20px;
+            background-color: #fff2cc;
+            border-left: 5px solid #ffbf00;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #edebe9;
+        }
+        th {
+            background-color: #f3f2f1;
+            font-weight: 600;
+        }
+        tr:hover {
+            background-color: #f7f9fa;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Mi Tablero de Pruebas</h1>
+        <p>Leyendo los datos procesados por Power Automate...</p>
+        
+        <div id="loading">Intentando leer el archivo JSON...</div>
+
+        <table id="tabla-datos" style="display: none;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre_curso</th>
+                    <th>Clave_banner</th>
+                    <th>Tipo_solicitud</th>
+                    <th>Tipo_producto</th>
+                    <th>Cliente_tipo</th>
+                    <th>Solicitante</th>
+                    <th>Fecha_solicitud</th>
+                    <th>Prioridad</th>
+                    <th>Estatus_solicitud</th>
+                </tr>
+            </thead>
+            <tbody id="contenedor-filas">
+                </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
